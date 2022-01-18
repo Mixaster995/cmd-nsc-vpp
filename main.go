@@ -191,6 +191,7 @@ func main() {
 	c := client.NewClient(
 		ctx,
 		client.WithClientURL(&config.ConnectTo),
+		client.WithoutRefresh(),
 		client.WithName(config.Name),
 		client.WithHealClient(heal.NewClient(ctx)),
 		client.WithAdditionalFunctionality(
